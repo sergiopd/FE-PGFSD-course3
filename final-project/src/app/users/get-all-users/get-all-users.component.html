@@ -1,0 +1,4 @@
+<button (click)="getUsers()">Fetch all users</button>
+
+<div *ngIf="users.length > 0">{{ users | json }}</div>
+

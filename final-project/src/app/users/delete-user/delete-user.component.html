@@ -1,0 +1,9 @@
+<!-- Delete user form -->
+<h3 class="mt-5 ">Delete user by email here</h3>
+<form class="mt-2 w-25" (ngSubmit)="onSubmit()" #deleteUser="ngForm" >
+  <div class="mb-3">
+    <label for="email" class="form-label">Please enter your email</label>
+    <input type="email" class="form-control" id="email" [(ngModel)]="email">
+  </div>
+  <button type="submit" class="btn btn-primary">Delete user</button>
+</form>

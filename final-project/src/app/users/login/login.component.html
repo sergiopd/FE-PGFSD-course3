@@ -1,0 +1,17 @@
+<!-- Add user form -->
+<h3 class="mt-5 ">Login here</h3>
+<form class="mt-2 w-25" (ngSubmit)="onSubmit()" #login="ngForm">
+  <div class="mb-3">
+    <label for="email" class="form-label">Please enter your email</label>
+    <input type="email" class="form-control" id="email" name="email" [(ngModel)]="email">
+  </div>
+  <div class="mb-3">
+    <label for="password" class="form-label">Please enter your password</label>
+    <input type="password" class="form-control" id="password" name="password" [(ngModel)]="password">
+  </div>
+  <button type="submit" class="btn btn-primary">Add user</button>
+</form>
+
+<div class="my-4">
+  <a href="/users/add">If you aren't registered yet. Click here!</a>
+</div>

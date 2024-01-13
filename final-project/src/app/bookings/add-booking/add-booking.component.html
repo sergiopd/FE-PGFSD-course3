@@ -1,0 +1,42 @@
+<!-- Add booking form -->
+<h3 class="mt-5 ">Add booking here</h3>
+<form class="mt-2 w-25" (ngSubmit)="onSubmit()" #addBooking="ngForm">
+  <div class="mb-3">
+    <label for="atWhatTime" class="form-label">Please enter the new pick up time</label>
+    <input type="text" class="form-control" id="atWhatTime" name="atWhatTime" [(ngModel)]="model.atWhatTime">
+  </div>
+  <div class="mb-3">
+    <label for="startLocation" class="form-label">Please enter the new start location for your trip</label>
+    <input type="text" class="form-control" id="startLocation" name="startLocation" [(ngModel)]="model.startLocation">
+  </div>
+  <div class="mb-3">
+    <label for="endLocation" class="form-label">Please enter the new end location for your trip</label>
+    <input type="text" class="form-control" id="endLocation" name="endLocation" [(ngModel)]="model.endLocation">
+  </div>
+  <div class="mb-3">
+    <label for="typeOfCab" class="form-label">Please enter the new type of cab</label>
+    <select name="country" [(ngModel)]="model.typeOfCab" (change)="calculateFare()">
+      <option value="" disabled>Choose your type of cab</option>
+      <option *ngFor="let type of typeOfCabs" [value]="type">
+          {{ type }}
+      </option>
+  </select>
+  </div>
+  <div class="mb-3">
+    <label for="intialFare" class="form-label">Please enter new initial fare</label>
+    <input type="number" class="form-control" id="intialFare" name="intialFare" [(ngModel)]="model.intialFare">
+  </div>
+  <div class="mb-3">
+    <label for="farePerKm" class="form-label">Please enter new fare per kilometer</label>
+    <input type="number" class="form-control" id="farePerKm" name="farePerKm" [(ngModel)]="model.farePerKm">
+  </div>
+  <div class="mb-3">
+    <label for="totalFare" class="form-label">This is the total fare</label>
+    <input type="number" class="form-control" id="totalFare" name="totalFare" [(ngModel)]="model.totalFare" disabled>
+  </div>
+  <div class="mb-3">
+    <label for="userID" class="form-label">Please enter user id</label>
+    <input type="number" class="form-control" id="userID" name="userID" [(ngModel)]="model.userID">
+  </div>
+  <button type="submit" class="btn btn-primary">Add booking</button>
+</form>

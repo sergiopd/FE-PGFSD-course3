@@ -1,0 +1,11 @@
+<!-- Get booking form -->
+<h3 class="mt-5 ">Delete booking by id here</h3>
+<form class="mt-2 w-25" (ngSubmit)="onSubmit()" #deleteBooking="ngForm">
+  <div class="mb-3">
+    <label for="bookID" class="form-label">Please enter the book id</label>
+    <input type="number" class="form-control" id="bookID" name="bookID" [(ngModel)]="id">
+  </div>
+  <button type="submit" class="btn btn-primary">Get booking</button>
+</form>
+
+<div *ngIf="booking.startLocation.length > 1">{{ booking | json }}</div>

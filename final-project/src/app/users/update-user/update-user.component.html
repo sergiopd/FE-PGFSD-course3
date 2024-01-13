@@ -1,0 +1,21 @@
+<!-- Update user form -->
+<h3 class="mt-5 ">Update user here</h3>
+<form class="mt-2 w-25" (ngSubmit)="updateServer()" #updateUser="ngForm">
+  <div class="mb-3">
+    <label for="userName" class="form-label">Please enter your name</label>
+    <input type="text" class="form-control" id="userName" name="userName" [(ngModel)]="model.userName">
+  </div>
+  <div class="mb-3">
+    <label for="phone" class="form-label">Please enter your phone number</label>
+    <input type="text" class="form-control" id="phone" name="phone" [(ngModel)]="model.phone">
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">Please enter your email</label>
+    <input type="email" class="form-control" id="email" name="email" [(ngModel)]="model.email">
+  </div>
+  <div class="mb-3">
+    <label for="userPassword" class="form-label">Please enter your password</label>
+    <input type="password" class="form-control" id="userPassword" name="userPassword" [(ngModel)]="model.userPassword">
+  </div>
+  <button type="submit" class="btn btn-primary">Update user</button>
+</form>

@@ -1,0 +1,3 @@
+<button (click)="getUsers()">Fetch all bookings</button>
+
+<div *ngIf="bookings.length > 0">{{ bookings | json }}</div>
